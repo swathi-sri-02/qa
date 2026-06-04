@@ -1,0 +1,48 @@
+{
+  "openapi": "3.0.3",
+  "info": {
+    "title": "Helpdesk API",
+    "version": "1.0.0",
+    "description": "Sample Helpdesk OpenAPI specification"
+  },
+  "paths": {
+    "/tickets": {
+      "get": {
+        "summary": "List tickets",
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      },
+      "post": {
+        "summary": "Create ticket",
+        "responses": {
+          "201": {
+            "description": "Created"
+          }
+        }
+      }
+    },
+    "/tickets/{ticketId}": {
+      "get": {
+        "summary": "Get ticket by ID",
+        "parameters": [
+          {
+            "name": "ticketId",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "string"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Success"
+          }
+        }
+      }
+    }
+  }
+}
